@@ -60,8 +60,9 @@ button.addEventListener('click', async () => {
     `
     const result = await buscarCotizacion()
     const serie = result.serie;
+    const cantidad = input.value;
     const lastValue = serie[0].valor;
-    const calculo = (input.value) / lastValue;  
+    const calculo = cantidad / lastValue;  
     
     const valor = (calculo).toFixed(2);
     const data = serie.slice(0, 10).reverse();
